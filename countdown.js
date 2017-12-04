@@ -1,12 +1,12 @@
 /* Mostly from: https://www.w3schools.com/howto/howto_css_coming_soon.asp */
 
-// Set the date we're counting down to
-var countDownDate = new Date("Dec 11, 2017 23:30").getTime();
+// Set the date we're counting down to, UTC because London
+var countDownDate = Date.UTC(2017, 11, 11, 19, 30);
 
 // Update the count down every 1 second
 var x = setInterval(function() {
 
-  // Get todays date and time
+  // Get todays date and time (in local time)
   var now = new Date().getTime();
 
   // Find the distance between now an the count down date
